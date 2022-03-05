@@ -17,10 +17,6 @@ int main(){
         sum = x/500+1;
         q = sum*4+8;
     }
-    if(b == 'y'){
-        cout<<sum*4+8+5;
-        return 0;
-    }
     if(b == 'n')
     {
         cout<<q;
