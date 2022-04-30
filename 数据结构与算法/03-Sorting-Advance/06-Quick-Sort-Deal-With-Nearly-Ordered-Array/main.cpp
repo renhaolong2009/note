@@ -7,7 +7,6 @@ using namespace std;
 template <typename T>
 int __partition(T arr[], int l, int r)
 {
-
     swap(arr[l], arr[rand() % (r - l + 1) + 1]);
     T v = arr[l];
 
@@ -22,12 +21,14 @@ int __partition(T arr[], int l, int r)
     }
 
     swap(arr[l], arr[j]);
+
+    return j;
 }
 
 template <typename T>
 void __quickSort(T arr[], int l, int r)
 {
-    if (r - l <= 15)
+    if (r - l <= 15) //同归并排序
     {
         insertionSort(arr, l, r);
         return;
